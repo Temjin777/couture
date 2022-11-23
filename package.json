@@ -1,0 +1,22 @@
+{
+  "name": "couture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Temjin777/couture.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Temjin777/couture/issues"
+  },
+  "homepage": "https://github.com/Temjin777/couture#readme",
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  }
+}
