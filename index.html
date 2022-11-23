@@ -11,6 +11,11 @@
     header {
       text-align: center; 
     }
+    input {
+      width: 4rem; 
+      padding: 0.25rem;
+    }
+
     </style>
 
   <header>
@@ -26,7 +31,7 @@
 
       <li>Marges de couture</li>
       <label>Quelle est la longueur d'une marge de couture en cm: </label>
-      <input id="marge" type="number" value="1.5" step="any" size="4" onchange="marge_change()">
+      <input id="marge" type="number" value="1.5" step="any" onchange="marge_change()" >
       <label id="margesuffix"></label> <br><br>
 
       <li>Pour chaque mesure (Poitrine, Taille, ...), referez vous au tableau des mesures:</li>
@@ -35,8 +40,8 @@
 
       <li>Ajoutez autant de pièces qu'il y en a dans le patron, entrez leurs tailles en cm et ensuite calculez les ajustements:</li>
       <form>
-        <input type="button" value="Ajouter une pièce" onClick=AddInputRow() >
-        <input type="button" value="Supprimer une pièce" onClick=DeleteInputRow() >
+        <input type="button" value="Ajouter une pièce" onClick=AddInputRow() style="width: 12rem;">
+        <input type="button" value="Supprimer une pièce" onClick=DeleteInputRow() style="width: 12rem;">
       </form>
       <table>      
         <tr>
@@ -50,7 +55,7 @@
           <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----->&nbsp;&nbsp;&nbsp;&nbsp;</td> 
           <td>
             <form>
-              <input type="button" value="Calculer ajustements" onClick=Adjust()>
+              <input type="button" value="Calculer ajustements" onClick=Adjust() style="width: 12rem;">
             </form>
           </td>
           <td>
