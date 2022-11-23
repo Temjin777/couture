@@ -1,0 +1,74 @@
+<html>
+
+  <script src="index.js"></script>          
+
+  <style>
+    body {
+      background-position:right;
+      background-repeat: no-repeat;
+      background-image: url('images/mensurations.png');
+    }
+    header {
+      text-align: center; 
+    }
+    </style>
+
+  <header>
+    <h1>Ajustement Patron Couture</h1>
+  </header>
+
+  <body onload="marge_change()">
+    <ol>
+      <li>Prises de mesures</li>
+      <label>Commencez par <a href="https://coursdecouture.org/prendre-les-bonnes-mesures/" target="_blank">prendre vos mesures</a> et entourez les sur le tableau des mesures normalisées de votre patron</label>
+      <img src="images/mesures.png" >
+      <p>Choisir la plus grande taille de patron parmi les colonnes entourées. Dans notre cas la taille 6 (vous devrez diminuer potrine et bassin)</p> 
+
+      <li>Marges de couture</li>
+      <label>Quelle est la longueur d'une marge de couture en cm: </label>
+      <input id="marge" type="number" value="1.5" step="any" size="4" onchange="marge_change()">
+      <label id="margesuffix"></label> <br><br>
+
+      <li>Pour chaque mesure (Poitrine, Taille, ...), referez vous au tableau des mesures:</li>
+      <label>Quelle est votre mesure réelle: </label><input id="reele" type="number" step="any" size="4" ><label>cm</label><br>    
+      <label>Quelle est la mesure normalisée de votre patron: </label><input id="normalisee" type="number" step="any" size="4" ><label>cm</label><br><br>   
+
+      <li>Ajoutez autant de pièces qu'il y en a dans le patron, entrez leurs tailles en cm et ensuite calculez les ajustements:</li>
+      <form>
+        <input type="button" value="Ajouter une pièce" onClick=AddInputRow() >
+        <input type="button" value="Supprimer une pièce" onClick=DeleteInputRow() >
+      </form>
+      <table>      
+        <tr>
+          <td>
+            <table id="tabpieces">
+              <tr>
+                <td>Taille pièce en cm</td>
+              </tr>
+            </table>
+          </td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;----->&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td>
+            <form>
+              <input type="button" value="Calculer ajustements" onClick=Adjust()>
+            </form>
+          </td>
+          <td>
+            <table id="tabajust">
+              <tr>
+                <td>Ajustement pièce en cm</td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <table id="tabajust2">
+              <tr>
+                <td>soit à gauche et à droite (cm)</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+  </ol>
+  </body>
+</html>
